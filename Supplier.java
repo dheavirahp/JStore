@@ -1,33 +1,51 @@
+import java.util.Scanner;
+public class Supplier{
+	private int id;
+	private String name;
+	private String email;
+	private String phoneNumber;
+	private String city;
 
-/**
- * Write a description of class Supplier here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Supplier
-{
-    // instance variables - replace the example below with your own
-    private int x;
+	public Supplier(){
+	}
 
-    /**
-     * Constructor for objects of class Supplier
-     */
-    public Supplier()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+	public int getId (){
+		return id;
+	}
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+	public String getName(){
+		return "";
+	}
+
+	public String getEmail(){
+		return "";
+	}
+
+	public String getPhoneNumber(){
+		return "";
+	}
+
+	public String getCity (){
+		return "";
+	}
+
+	public void setId (int id){
+	
+	}
+
+	public void setName(String name){
+
+	}
+
+	public void setEmail (int email){
+
+	}
+
+	public void setPhoneNumber (int phoneNumber){
+	
+	}
+
+	public void setCity (String city){
+
+	}
 }

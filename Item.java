@@ -14,7 +14,7 @@ public class Item{
 	}
 
 	public String getName(){
-		return name;
+		return "";
 	}
 
 	public int getStock(){
@@ -26,26 +26,26 @@ public class Item{
 	}
 
 	public String getCategory (){
-		return category;
+		return "";
 	}
 
-	public setId (int id){
-		return 0;
-	}
-
-	public setName(String name){
+	public void setId (int id){
 		
 	}
 
-	public setStock (int stock){
-		return 0;
+	public void setName(String name){
+		
 	}
 
-	public setPrice (int price){
-		return 0;
+	public void setStock (int stock){
+	
 	}
 
-	public setCategory (String category){
+	public void setPrice (int price){
+		
+	}
+
+	public void setCategory (String category){
 
 	}
 }

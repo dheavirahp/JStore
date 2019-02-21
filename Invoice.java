@@ -1,33 +1,43 @@
+import java.util.Scanner;
+public class Invoice{
+    private int id;
+    private int idItem;
+    private String date;
+    private int totalPrice;
 
-/**
- * Write a description of class Invoice here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Invoice
-{
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class Invoice
-     */
-    public Invoice()
-    {
-        // initialise instance variables
-        x = 0;
+    public Invoice(){
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public int getId (){
+        return id;
+    }
+
+    public String getIdItem(){
+        return "";
+    }
+
+    public String getDate(){
+        return "";
+    }
+
+    public int getTotalPrice(){
+        return totalPrice;
+    }
+    
+    public void setId (int id){
+    
+    }
+
+    public void setIdItem (int idItem){
+
+    }
+
+    public void setDate (String date){
+
+    }
+
+    public void setTotalPrice (int totalPrice){
+    
     }
 }
