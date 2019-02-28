@@ -1,19 +1,25 @@
 import java.util.Scanner;
 public class DatabaseItem{
-	private String[] listItem;
+    private String[] listItem;
+    private static Item item;
 
 
-	public DatabaseItem(){
-	}
+    public DatabaseItem(){
+    }
 
-	public void addItem (){
-	
-	}
+    public void addItem (){
+    
+    }
 
-	public void removeItem(){
-	
-	}
+    public void removeItem(){
+    
+    }
+    
+    public Item getItem (){
+        return item;
+    }
 
-	public void getItemDatabase(){
-	}
+    public String[] getItemDatabase(){
+    return listItem;
+}
 }
