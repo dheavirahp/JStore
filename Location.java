@@ -1,17 +1,29 @@
-/**
-*Description of Class Location here
-*
-*@author (Dheavira Hadina Putri)
-*@version(28/01/2018)
-*/
 import java.util.Scanner;
+/**
+*Class Location digunakan untuk melakukan pendataan untuk pembagian wilayah
+*darimana Supplier berasal, nantinya class ini akan dipanggil kembali didalam
+*Class Supplier untuk mencirikan darimana Supplier itu berasal.
+*
+* @author Dheavira Hadina Putri
+* @version 1
+* @since 28/01/2018
+*/
 public class Location{
     private String province;
     private String description;
     private String city;
-
+/**
+ *  Inisiasi fungsi-fungsi yang akan berjalan didalam Class Location
+ * 
+ * @param city penentuan lokasi dalam wilayah kota 
+ * @param province penentuan lokasi dalam wilayah provinsi
+ * @param description melakukan deskripsi lokasi dengan lebih detail
+ */
     public Location(String city, String province, String description){
-    }
+    this.city = city;
+    this.province = province;
+    this.description = description;
+}
 
     public String getProvince(){
         return province;
