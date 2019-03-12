@@ -12,22 +12,41 @@ public class DatabaseItem{
     private String[] listItem;
     private static Item item;
 
-
+/**
+ *
+ *Meruapakan Constructor dari Object class DatabaseItem
+ */
     public DatabaseItem(){
     }
-
+/**
+* Method untuk menambahkan data item kedalam list item
+*
+* @return    false
+*/
     public boolean addItem (){
-        return true;
+        return false;
     }
-
+/**
+* Method untuk menghapus data item dari list item
+*
+* @return    false
+*/
     public boolean removeItem(){
-        return true;
+        return false;
     }
-    
+/**
+* Method untuk mendapatkan data item dari list item
+*
+* @return item
+*/    
     public Item getItem (){
         return item;
     }
-
+/**
+* Method untuk mengambil data item dari list item
+*
+* @return listItem
+*/
     public String[] getItemDatabase(){
     return listItem;
 }
