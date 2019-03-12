@@ -16,6 +16,8 @@ public class Item{
     private String category;
     private static Supplier supplier;
 /**
+ * 
+ * Meruapakan Constructor dari Object class Item
  * Inisiasi fungsi-fungsi yang akan berjalan didalam Class Item
  * 
  * @param id nomor ID untuk mewakili setiap Item 
@@ -34,59 +36,106 @@ public class Item{
     this.supplier = supplier;
     
 }
-
+/**
+* Method untuk mengembalikan data id barang
+*
+* @return mengembalikan data id barang
+*/
     public int getId (){
         return id;
     }
-
+/**
+* Method untuk mengembalikan data nama barang
+*
+* @return mengembalikan data nama barang
+*/
     public String getName(){
         return name;
     }
-
+/**
+* Method untuk mengembalikan data jumlah ketersediaan barang
+*
+* @return mengembalikan data jumlah ketersediaan barang
+*/
     public int getStock(){
         return stock;
     }
-
+/**
+* Method untuk mengembalikan data harga barang
+*
+* @return mengembalikan data harga barang
+*/
     public int getPrice(){
         return price;
     }
-
+/**
+* Method untuk mengembalikan data kategori barang
+*
+* @return mengembalikan data kategori barang
+*/
     public String getCategory (){
         return category;
     }
-    
+/**
+* Method untuk mengembalikan data supplier
+*
+* @return mengembalikan data supplier
+*/    
     public Supplier getSupplier (){
         return supplier;
     }
-    /**
-     * description function
-     * @param id
-     */
+/**
+* Method untuk mengubah data id barang
+*
+* @param id data id barang
+*/
     public void setId (int id){
         this.id = id;
     }
-
+/**
+* Method untuk mengubah data nama barang
+*
+* @param name data nama barang
+*/
     public void setName(String name){
         this.name = name;
     }
-
+/**
+* Method untuk mengubah data jumlah ketersediaan barang
+*
+* @param stock data jumlah ketersediaan barang
+*/
     public void setStock (int stock){
         this.stock = stock;
     }
-
+/**
+* Method untuk mengubah data harga barang
+*
+* @param price data harga barang
+*/
     public void setPrice (int price){
         this.price = price;
     }
-
+/**
+* Method untuk mengubah data kategori barang
+*
+* @param category data kategori barang
+*/
     public void setCategory (String category){
         this.category = category;
     }
-
+/**
+* Method untuk mengubah data supplier
+*
+* @param supplier data supplier
+*/
     public void setSupplier (Supplier supplier){
         this.supplier = supplier;
 
     }
-    
+/**
+* Method untuk menampilkan data yang dipanggil
+*/    
     public void printData (){
         System.out.println ("ID = "+id);
         System.out.println ("Name = "+name);

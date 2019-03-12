@@ -13,7 +13,8 @@ public class Location{
     private String description;
     private String city;
 /**
- *  Inisiasi fungsi-fungsi yang akan berjalan didalam Class Location
+ * Meruapakan Constructor dari Object class Location
+ * Inisiasi fungsi-fungsi yang akan berjalan didalam Class Location
  * 
  * @param city penentuan lokasi dalam wilayah kota 
  * @param province penentuan lokasi dalam wilayah provinsi
@@ -24,31 +25,57 @@ public class Location{
     this.province = province;
     this.description = description;
 }
-
+/**
+* Method untuk mengembalikan data nama provinsi
+*
+* @return mengembalikan data nama provinsi
+*/
     public String getProvince(){
         return province;
     }
-
+/**
+* Method untuk mengembalikan data nama kota
+*
+* @return mengembalikan data nama kota
+*/
     public String getCity(){
         return city;
     }
-
+/**
+* Method untuk mengembalikan data deskripsi alamat
+*
+* @return mengembalikan data deskripsi alamat
+*/
     public String getDescription(){
         return description;
     }
-
+/**
+* Method untuk mengubah data nama provinsi
+*
+* @param province data nama provinsi
+*/
     public void setProvince(String province){
         this.province = province;
     }
-
+/**
+* Method untuk mengubah data nama kpota
+*
+* @param city data nama kota
+*/
     public void setCity(String city){
         this.city = city;
     }
-
+/**
+* Method untuk mengubah data deskripsi alamat
+*
+* @param description data deskripsi alamat
+*/
     public void setDescription(String description){
         this.description = description;
     }
-
+/**
+* Method untuk menampilkan data yang dipanggil
+*/
     public void printData (){
         System.out.println ("Kota = "+city);
         System.out.println ("Provinsi = "+province);

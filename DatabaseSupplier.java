@@ -14,21 +14,38 @@ public class DatabaseSupplier{
     private String[] listSupplier;
     private static Supplier supplier;
 
+/**
+* Meruapakan Constructor dari Object class Invoice
+*/
     public DatabaseSupplier(){
     }
-
+    /**
+     * Method untuk menambahkan data supplier kedalam list
+     *
+     * @return    untuk memberi nilai false
+     */
     public static boolean addSupplier (Supplier supplier){
-        return true;
+        return false;
     }
-
-    public boolean removeSupplier(Supplier supplier){
-        return true;
+/**
+* Method untuk menghapus data supplier dari list
+*/
+    public void removeSupplier(Supplier supplier){
+     
     }
-
+/**
+* Method untuk mengembalikan data supplier
+*
+* @return objek supplier dan mengembalikan nilai supplier
+*/
     public Supplier getSupplier (){
         return supplier;
     }
-    
+/**
+* Method untuk mengembalikan data supplier ke list supplier
+* 
+* @return list dari data supplier
+*/    
     public String[] getListSupplier(){
     return listSupplier;
 }
