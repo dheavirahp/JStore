@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class DatabaseItem{
     private String[] listItem;
-    private static Item item;
+    public static Item itemDB;
 
 /**
  *
@@ -23,15 +23,16 @@ public class DatabaseItem{
 *
 * @return    false
 */
-    public boolean addItem (){
-        return false;
+    public static boolean addItem (Item item){
+       itemDB = item;
+       return false;
     }
 /**
 * Method untuk menghapus data item dari list item
 *
 * @return    false
 */
-    public boolean removeItem(){
+    public static boolean removeItem(Item itemDB){
         return false;
     }
 /**
@@ -39,8 +40,8 @@ public class DatabaseItem{
 *
 * @return item
 */    
-    public Item getItem (){
-        return item;
+    public static Item getItem(){
+        return itemDB;
     }
 /**
 * Method untuk mengambil data item dari list item

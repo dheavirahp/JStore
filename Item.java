@@ -13,7 +13,8 @@ public class Item{
     private String name;
     private int stock;
     private int price;
-    private String category;
+    private static ItemCategory category;
+    private static ItemStatus status;
     private static Supplier supplier;
 /**
  * 
@@ -27,13 +28,14 @@ public class Item{
  * @param category kategori Item yang disimpan
  * @param supplier data supplier yang memasok Item tersebut
  */
-    public Item(int id, String name, int stock, int price, String category, Supplier supplier){
+    public Item(int id, String name, int stock, int price, ItemStatus status, ItemCategory category, Supplier supplier){
     this.id = id;
     this.name = name;
     this.stock = stock;
     this.price = price;
     this.category = category;
     this.supplier = supplier;
+    this.status = status;
     
 }
 /**
@@ -73,7 +75,7 @@ public class Item{
 *
 * @return mengembalikan data kategori barang
 */
-    public String getCategory (){
+    public ItemCategory getCategory (){
         return category;
     }
 /**
@@ -83,6 +85,10 @@ public class Item{
 */    
     public Supplier getSupplier (){
         return supplier;
+    }
+    
+    public ItemStatus getStatus (){
+        return status;
     }
 /**
 * Method untuk mengubah data id barang
@@ -121,7 +127,7 @@ public class Item{
 *
 * @param category data kategori barang
 */
-    public void setCategory (String category){
+    public void setCategory (ItemCategory category){
         this.category = category;
     }
 /**
@@ -133,14 +139,21 @@ public class Item{
         this.supplier = supplier;
 
     }
+    
+    public void setStatus (ItemStatus status){
+        this.status = status;
+    }
 /**
 * Method untuk menampilkan data yang dipanggil
 */    
     public void printData (){
+        System.out.println ("----------ITEM----------");
         System.out.println ("ID = "+id);
         System.out.println ("Name = "+name);
-        System.out.println ("Price = "+price);
+        System.out.println ("Stock = "+stock);
         System.out.println ("Category = "+category);
+        System.out.println ("Status = "+status);
+        System.out.println ("Supplier = "+supplier.getName());
     }
 
 }

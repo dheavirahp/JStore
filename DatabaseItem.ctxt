@@ -1,13 +1,19 @@
 #BlueJ class context
 comment0.target=DatabaseItem
+comment0.text=\r\nClass\ DatabaseItem\ digunakan\ sebagai\ pengolahan\ data\ yang\ sudah\ masuk\r\ndari\ Class\ Item\ dan\ kita\ bisa\ menambahkan\ dan\ menghapus\ data\ dari\ Class\ Item\r\nJika\ terjadi\ kesalahan\ dalam\ pemasukan\ informasi.\r\n\r\n@author\ Dheavira\ Hadina\ Putri\r\n@version\ 1\r\n@since\ 28/01/2018\r\n
 comment1.params=
 comment1.target=DatabaseItem()
-comment2.params=
-comment2.target=void\ addItem()
-comment3.params=
-comment3.target=void\ removeItem()
+comment1.text=\r\n\r\nMeruapakan\ Constructor\ dari\ Object\ class\ DatabaseItem\r\n
+comment2.params=item
+comment2.target=boolean\ addItem(Item)
+comment2.text=\r\n\ Method\ untuk\ menambahkan\ data\ item\ kedalam\ list\ item\r\n\r\n\ @return\ \ \ \ false\r\n
+comment3.params=itemDB
+comment3.target=boolean\ removeItem(Item)
+comment3.text=\r\n\ Method\ untuk\ menghapus\ data\ item\ dari\ list\ item\r\n\r\n\ @return\ \ \ \ false\r\n
 comment4.params=
 comment4.target=Item\ getItem()
+comment4.text=\r\n\ Method\ untuk\ mendapatkan\ data\ item\ dari\ list\ item\r\n\r\n\ @return\ item\r\n
 comment5.params=
 comment5.target=java.lang.String[]\ getItemDatabase()
+comment5.text=\r\n\ Method\ untuk\ mengambil\ data\ item\ dari\ list\ item\r\n\r\n\ @return\ listItem\r\n
 numComments=6

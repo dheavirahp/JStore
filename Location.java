@@ -77,6 +77,7 @@ public class Location{
 * Method untuk menampilkan data yang dipanggil
 */
     public void printData (){
+        System.out.println ("----------LOCATION----------");
         System.out.println ("Kota = "+city);
         System.out.println ("Provinsi = "+province);
         System.out.println ("Deskripsi Alamat= "+description);

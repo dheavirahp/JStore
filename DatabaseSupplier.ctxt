@@ -1,13 +1,19 @@
 #BlueJ class context
 comment0.target=DatabaseSupplier
+comment0.text=\r\nClass\ DatabaseSupplier\ digunakan\ sebagai\ pengolahan\ data\ yang\ sudah\ masuk\r\ndari\ Class\ Supplier\ dan\ kita\ bisa\ menambahkan\ dan\ menghapus\ data\ dari\r\nClass\ Supplier\ jika\ terjadi\ kesalahan\ dalam\ pemasukan\ informasi.\r\n\ \r\n@author\ Dheavira\ Hadina\ Putri\r\n@version\ 1\r\n@since\ 28/01/2018\r\n
 comment1.params=
 comment1.target=DatabaseSupplier()
+comment1.text=\r\n\ Meruapakan\ Constructor\ dari\ Object\ class\ Invoice\r\n
 comment2.params=supplier
 comment2.target=boolean\ addSupplier(Supplier)
+comment2.text=\r\n\ Method\ untuk\ menambahkan\ data\ supplier\ kedalam\ list\r\n\r\n\ @return\ \ \ \ untuk\ memberi\ nilai\ false\r\n
 comment3.params=supplier
 comment3.target=void\ removeSupplier(Supplier)
+comment3.text=\r\n\ Method\ untuk\ menghapus\ data\ supplier\ dari\ list\r\n
 comment4.params=
 comment4.target=Supplier\ getSupplier()
+comment4.text=\r\n\ Method\ untuk\ mengembalikan\ data\ supplier\r\n\r\n\ @return\ objek\ supplier\ dan\ mengembalikan\ nilai\ supplier\r\n
 comment5.params=
 comment5.target=java.lang.String[]\ getListSupplier()
+comment5.text=\r\n\ Method\ untuk\ mengembalikan\ data\ supplier\ ke\ list\ supplier\r\n\ \r\n\ @return\ list\ dari\ data\ supplier\r\n
 numComments=6

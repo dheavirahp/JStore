@@ -12,7 +12,9 @@ public class Invoice{
     private int id;
     private Item item;
     private String date;
+    private int totalItem;
     private int totalPrice;
+    private InvoiceStatus status;
 
 /**
  *Meruapakan Constructor dari Object class Invoice
@@ -23,11 +25,14 @@ public class Invoice{
  * @param date untuk menentukan waktu invoice dibuat (dimasukkan oleh user)
  * @param totalPrice digunakan untuk melakukan penjumlahan seluruh harga Item yang dipilih
  */
-    public Invoice(int id, Item item, String date, int totalPrice ){
+    public Invoice(int id, Item item, InvoiceStatus status, String date, int totalPrice, int totalItem ){
     this.id  =id;
     this.item = item;
     this.date = date;
     this.totalPrice = totalPrice;
+    this.totalItem = totalItem;
+    this.status = status;
+
     }
 /**
 * Method untuk mengembalikan data id pembelian
@@ -58,6 +63,12 @@ public class Invoice{
 *
 * @return mengembalikan data total harga pembelian
 */
+    public int getTotalItem(){
+        return totalPrice;
+    }
+    public InvoiceStatus getInvoiceStatus(){
+        return status;
+    }
     public int getTotalPrice(){
         return totalPrice;
     }
@@ -93,14 +104,23 @@ public class Invoice{
     public void setTotalPrice (int totalPrice){
         this.totalPrice = totalPrice;
     }
+    public void setTotalItem (int totalItem){
+        this.totalItem = totalItem;
+    }
+    public void setInvoiceStatus (InvoiceStatus status){
+        this.status = status;
+    }
 /**
 * Method untuk menampilkan data yang dipanggil
 */
     public void printData (){
+        System.out.println ("----------INVOICE----------");
         System.out.println ("ID = "+id);
-        System.out.println ("Jumlah Barang = "+item);
-        System.out.println ("Tanggal Pembelian = "+date);
+        System.out.println ("Date = "+date);
+        System.out.println ("Item = "+item.getName());
+        System.out.println ("Total Item = "+totalItem);
         System.out.println ("Total Harga Barang = "+totalPrice);
+        System.out.println ("Status = "+status);
         
     }
 }

@@ -116,8 +116,10 @@ public class Supplier{
 * Method untuk menampilkan data yang dipanggil
 */    
     public void printData (){
-                System.out.println ("ID = "+id);
+        System.out.println ("----------SUPPLIER----------");
         System.out.println ("Name = "+name);
+        System.out.println ("Email = "+email);
         System.out.println ("Nomer Telepon = "+phoneNumber);
+        System.out.println ("Lokasi = "+location.getCity());
     }
 }
