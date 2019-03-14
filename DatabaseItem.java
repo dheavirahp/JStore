@@ -10,7 +10,11 @@ import java.util.Scanner;
  */
 public class DatabaseItem{
     private String[] listItem;
+<<<<<<< HEAD
     public static Item itemDB;
+=======
+    private static Item item;
+>>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
 
 /**
  *
@@ -23,16 +27,25 @@ public class DatabaseItem{
 *
 * @return    false
 */
+<<<<<<< HEAD
     public static boolean addItem (Item item){
        itemDB = item;
        return false;
+=======
+    public boolean addItem (){
+        return false;
+>>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
     }
 /**
 * Method untuk menghapus data item dari list item
 *
 * @return    false
 */
+<<<<<<< HEAD
     public static boolean removeItem(Item itemDB){
+=======
+    public boolean removeItem(){
+>>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
         return false;
     }
 /**
@@ -40,8 +53,13 @@ public class DatabaseItem{
 *
 * @return item
 */    
+<<<<<<< HEAD
     public static Item getItem(){
         return itemDB;
+=======
+    public Item getItem (){
+        return item;
+>>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
     }
 /**
 * Method untuk mengambil data item dari list item

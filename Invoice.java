@@ -30,9 +30,12 @@ public class Invoice{
     this.item = item;
     this.date = date;
     this.totalPrice = totalPrice;
+<<<<<<< HEAD
     this.totalItem = totalItem;
     this.status = status;
 
+=======
+>>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
     }
 /**
 * Method untuk mengembalikan data id pembelian
@@ -63,12 +66,15 @@ public class Invoice{
 *
 * @return mengembalikan data total harga pembelian
 */
+<<<<<<< HEAD
     public int getTotalItem(){
         return totalPrice;
     }
     public InvoiceStatus getInvoiceStatus(){
         return status;
     }
+=======
+>>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
     public int getTotalPrice(){
         return totalPrice;
     }
@@ -104,12 +110,15 @@ public class Invoice{
     public void setTotalPrice (int totalPrice){
         this.totalPrice = totalPrice;
     }
+<<<<<<< HEAD
     public void setTotalItem (int totalItem){
         this.totalItem = totalItem;
     }
     public void setInvoiceStatus (InvoiceStatus status){
         this.status = status;
     }
+=======
+>>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
 /**
 * Method untuk menampilkan data yang dipanggil
 */
