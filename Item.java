@@ -75,12 +75,9 @@ public class Item{
 *
 * @return mengembalikan data kategori barang
 */
-<<<<<<< HEAD
+
     public ItemCategory getCategory (){
-=======
-    public String getCategory (){
->>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
-        return category;
+      return category;  
     }
 /**
 * Method untuk mengembalikan data supplier
@@ -90,13 +87,12 @@ public class Item{
     public Supplier getSupplier (){
         return supplier;
     }
-<<<<<<< HEAD
+
     
     public ItemStatus getStatus (){
         return status;
     }
-=======
->>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
+
 /**
 * Method untuk mengubah data id barang
 *
@@ -134,12 +130,10 @@ public class Item{
 *
 * @param category data kategori barang
 */
-<<<<<<< HEAD
+
     public void setCategory (ItemCategory category){
-=======
-    public void setCategory (String category){
->>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
-        this.category = category;
+                this.category = category;
+
     }
 /**
 * Method untuk mengubah data supplier
@@ -150,13 +144,12 @@ public class Item{
         this.supplier = supplier;
 
     }
-<<<<<<< HEAD
+
     
     public void setStatus (ItemStatus status){
         this.status = status;
     }
-=======
->>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
+
 /**
 * Method untuk menampilkan data yang dipanggil
 */    

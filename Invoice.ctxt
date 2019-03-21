@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Invoice
 comment0.text=\r\nClass\ Invoice\ berfungsi\ sebagai\ tanda\ bukti\ transaksi\ dengan\ memperlihatkan\r\nfungsi\ dari\ Class\ Item\ dengan\ rincian\ total\ harga\ dari\ seluruh\ item\ yang\r\ndibeli\ beserta\ tanggal\ pembelian.\r\n\r\n@author\ Dheavira\ Hadina\ Putri\r\n@version\ 1\r\n@since\ 28/01/2018\r\n
-comment1.params=id\ item\ status\ date\ totalPrice\ totalItem
-comment1.target=Invoice(int,\ Item,\ InvoiceStatus,\ java.lang.String,\ int,\ int)
+comment1.params=id\ item\ date\ totalItem\ totalPrice
+comment1.target=Invoice(int,\ Item,\ java.lang.String,\ int,\ int)
 comment1.text=\r\nMeruapakan\ Constructor\ dari\ Object\ class\ Invoice\r\nInisiasi\ fungsi-fungsi\ yang\ akan\ berjalan\ didalam\ Class\ Invoice\r\n\ \r\n\ @param\ id\ nomor\ ID\ untuk\ mewakili\ setiap\ Item\ \r\n\ @param\ item\ untuk\ menentukan\ item\ yang\ dipilih\r\n\ @param\ date\ untuk\ menentukan\ waktu\ invoice\ dibuat\ (dimasukkan\ oleh\ user)\r\n\ @param\ totalPrice\ digunakan\ untuk\ melakukan\ penjumlahan\ seluruh\ harga\ Item\ yang\ dipilih\r\n
 comment10.params=date
 comment10.target=void\ setDate(java.lang.String)

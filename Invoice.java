@@ -8,13 +8,14 @@ import java.util.Scanner;
 *@version 1
 *@since 28/01/2018
 */
-public class Invoice{
+public abstract class Invoice{
     private int id;
     private Item item;
     private String date;
     private int totalItem;
-    private int totalPrice;
+    protected int totalPrice;
     private InvoiceStatus status;
+    private InvoiceType type;
 
 /**
  *Meruapakan Constructor dari Object class Invoice
@@ -25,17 +26,12 @@ public class Invoice{
  * @param date untuk menentukan waktu invoice dibuat (dimasukkan oleh user)
  * @param totalPrice digunakan untuk melakukan penjumlahan seluruh harga Item yang dipilih
  */
-    public Invoice(int id, Item item, InvoiceStatus status, String date, int totalPrice, int totalItem ){
+    public Invoice(int id, Item item, String date, int totalItem, int totalPrice){
     this.id  =id;
     this.item = item;
     this.date = date;
     this.totalPrice = totalPrice;
-<<<<<<< HEAD
     this.totalItem = totalItem;
-    this.status = status;
-
-=======
->>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
     }
 /**
 * Method untuk mengembalikan data id pembelian
@@ -66,15 +62,12 @@ public class Invoice{
 *
 * @return mengembalikan data total harga pembelian
 */
-<<<<<<< HEAD
     public int getTotalItem(){
         return totalPrice;
     }
     public InvoiceStatus getInvoiceStatus(){
         return status;
     }
-=======
->>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
     public int getTotalPrice(){
         return totalPrice;
     }
@@ -110,26 +103,16 @@ public class Invoice{
     public void setTotalPrice (int totalPrice){
         this.totalPrice = totalPrice;
     }
-<<<<<<< HEAD
+
     public void setTotalItem (int totalItem){
         this.totalItem = totalItem;
     }
     public void setInvoiceStatus (InvoiceStatus status){
         this.status = status;
     }
-=======
->>>>>>> 5f05b4865031be5d9d5fb4b66bb80cd77a25f60c
+
 /**
 * Method untuk menampilkan data yang dipanggil
 */
-    public void printData (){
-        System.out.println ("----------INVOICE----------");
-        System.out.println ("ID = "+id);
-        System.out.println ("Date = "+date);
-        System.out.println ("Item = "+item.getName());
-        System.out.println ("Total Item = "+totalItem);
-        System.out.println ("Total Harga Barang = "+totalPrice);
-        System.out.println ("Status = "+status);
-        
-    }
+    public abstract void printData();
 }
