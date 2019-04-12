@@ -1,6 +1,3 @@
-
-
-import java.util.Scanner;
 /**
  *Class DatabaseSupplier digunakan sebagai pengolahan data yang sudah masuk
  *dari Class Supplier dan kita bisa menambahkan dan menghapus data dari
@@ -10,44 +7,98 @@ import java.util.Scanner;
  *@version 1
  *@since 28/01/2018
  */
-public class DatabaseSupplier{
-    private String[] listSupplier;
-    private static Supplier supplier;
+import java.util.*;
 
-/**
-* Meruapakan Constructor dari Object class Invoice
-*/
-    public DatabaseSupplier(){
-    }
+public class DatabaseSupplier
+{
+    private static ArrayList<Supplier> SUPPLIER_DATABASE = new ArrayList<Supplier>();
+    private static int LAST_SUPPLIER_ID = 0;
+
     /**
-     * Method untuk menambahkan data supplier kedalam list
-     *
-     * @return    untuk memberi nilai false
+     * Constructor for objects of class DatabaseSupplier
      */
-    public static boolean addSupplier (Supplier supplier){
+    public DatabaseSupplier()
+    {
+        // initialise instance variables
+    }
+    
+    /**
+     * Method untuk mengembalikan list supplier
+     *
+     * @return    list supplier
+     */
+    public static ArrayList<Supplier> getSupplierDatabase()
+    {
+        return SUPPLIER_DATABASE;
+    }
+    
+    /**
+     * Method untuk mengembalikan supplier
+     *
+     * @return    objek supplier
+     */
+    public static int getLastSupplierID()
+    {
+        return LAST_SUPPLIER_ID;
+    }
+    
+    /**
+     * Method untuk menambahkan supplier kedalam list
+     *
+     * @return    false
+     */
+    public static boolean addSupplier(Supplier supplier)
+    {
+        for(Supplier temp : SUPPLIER_DATABASE) 
+        {
+            if((temp.getName() == supplier.getName()) && 
+            (temp.getEmail() == supplier.getEmail()) && 
+            (temp.getPhoneNumber() == supplier.getPhoneNumber())) 
+            {
+                return false;
+            }
+        }
+        SUPPLIER_DATABASE.add(supplier);
+        LAST_SUPPLIER_ID = supplier.getId();
+        return true;
+    }
+    
+    /**
+     * Method untuk mengembalikan supplier
+     *
+     * @return    objek supplier
+     */
+    public static Supplier getSupplier(int id)
+    {
+        for(Supplier temp : SUPPLIER_DATABASE) 
+        {
+            if(temp.getId() == id) 
+            {
+                return temp;
+            }
+        }
+        return null;
+    }
+    
+    /**
+     * Method untuk menghapus supplier dari list
+     *
+     */
+    public static boolean removeSupplier(int id)
+    {
+        for(Supplier temp : SUPPLIER_DATABASE) 
+        {
+            if(temp.getId() == id)
+            {
+                ArrayList<Item> list = DatabaseItem.getItemFromSupplier(temp);
+                for(Item temp1 : list) 
+                {
+                    DatabaseItem.removeItem(temp.getId());
+                }
+                SUPPLIER_DATABASE.remove(temp);
+                return true;
+            }
+        }
         return false;
     }
-/**
-* Method untuk menghapus data supplier dari list
-*/
-    public void removeSupplier(Supplier supplier){
-     
-    }
-/**
-* Method untuk mengembalikan data supplier
-*
-* @return objek supplier dan mengembalikan nilai supplier
-*/
-    public Supplier getSupplier (){
-        return supplier;
-    }
-/**
-* Method untuk mengembalikan data supplier ke list supplier
-* 
-* @return list dari data supplier
-*/    
-    public String[] getListSupplier(){
-    return listSupplier;
-}
-    
 }

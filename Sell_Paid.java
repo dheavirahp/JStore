@@ -1,27 +1,100 @@
+/**
+* @author Dheavira Hadina Putri
+*@version 1
+*@since 28/01/2018
+**/
+import java.util.*;
+import java.text.*;
 
-    public class Sell_Paid extends Invoice{
-        private InvoiceType INVOICE_TYPE = InvoiceType.Sell;
-        private InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
-        
-    public Sell_Paid(int id, Item item, String date, int totalPrice, int totalItem){
-        super(id, item, date, totalItem, totalPrice);
-  
+public class Sell_Paid extends Invoice
+{
+    private static InvoiceType INVOICE_TYPE = InvoiceType.Sell;
+    private static InvoiceStatus INVOICE_STATUS = InvoiceStatus.Paid;
+    private Customer customer;
+    private boolean isActive;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat ("dd MMM yyy");
+
+    /**
+     * Constructor for objects of class Sell_Paid
+     */
+    public Sell_Paid(ArrayList<Integer> item, Customer customer)
+    {
+        super(item);
+        isActive = false;
+    }
+
+    /**
+     * An 
+     *
+     * @param  y  a 
+     * @return    th
+     */
+    public Customer getCustomer()
+    {
+        return customer;
     }
     
-    public InvoiceStatus getInvoiceStatus (){
+    /**
+     * An 
+     *
+     * @param  y  a sa
+     * @return    the 
+     */
+    @Override
+    public InvoiceStatus getInvoiceStatus()
+    {
         return INVOICE_STATUS;
     }
-    public InvoiceType getInvoiceType (){
+    
+    /**
+     * An 
+     *
+     * @param  y  a 
+     * @return    th
+     */
+    @Override
+    public InvoiceType getInvoiceType()
+    {
         return INVOICE_TYPE;
     }
-    public void printData()
+    
+    /**
+     * An 
+     *
+     * @param  y  a 
+     * @return    th
+     */
+    public void setCustomer(Customer customer)
     {
-        System.out.println("==========INVOICE==========");
-        System.out.println("Id: " + super.getId());
-        System.out.println("tanggal: " + super.getDate());
-        System.out.println("item: " + super.getTotalItem());
-        System.out.println("total harga:  " + totalPrice);
-        System.out.println("Status: " + getInvoiceStatus());
-        System.out.println("Type: " + getInvoiceType());
+        this.customer = customer;
+    }
+    
+    /**
+     * Me
+     *
+     */    
+    @Override
+    public String toString()
+    {
+        System.out.println("ID = " + super.getId());
+        ArrayList<Integer> listItemID = DatabaseInvoice.getInvoice(super.getId()).getItem();
+        for(int tempID : listItemID)
+        {
+            System.out.println("Item = " + 
+            DatabaseItem.getItemFromID(tempID).getName());
+            System.out.println("Price = " + 
+            DatabaseItem.getItemFromID(tempID).getPrice());
+            System.out.println("Supplier ID = " + 
+            DatabaseItem.getItemFromID(tempID).getSupplier().getId());
+            System.out.println("Supplier name = " + 
+            DatabaseItem.getItemFromID(tempID).getSupplier().getName());
+        }
+        System.out.println("Buy date = " + dateFormat.format(super.getDate().getTime()));
+        System.out.println("Price total = " + super.getTotalPrice());
+        System.out.println("Customer ID = " + customer.getId());
+        System.out.println("Customer name = " + customer.getName());
+        System.out.println("Status = " + this.getInvoiceStatus());
+        System.out.println("Sell success.");
+        return "";
     }
 }

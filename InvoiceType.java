@@ -1,22 +1,21 @@
-
 /**
- * Enumeration class InvoiceType - write a description of the enum class here
- *
- * @author (your name here)
- * @version (version number or date here)
- */
+* @author Dheavira Hadina Putri
+*@version 1
+*@since 28/01/2018
+**/
 public enum InvoiceType
 {
-    Buy ("Buy"),
-    Sell("Sell");
+    Buy("Buy"), Sell("Sell");
     
-    String type;
+    private String description;
     
-    InvoiceType (String type){
-        this.type = type;
+    private InvoiceType(String description)
+    {
+        this.description = description;
     }
     
-    public String toString(){
-        return this.type;
+    public String toString()
+    {
+        return description;
     }
 }

@@ -1,11 +1,21 @@
-
 /**
- * Enumeration class ItemCategory - write a description of the enum class here
- *
- * @author (your name here)
- * @version (version number or date here)
- */
+* @author Dheavira Hadina Putri
+*@version 1
+*@since 28/01/2018
+**/
 public enum ItemCategory
 {
-    Electronics, Furniture, Stationery;
+    Electronics("Electronics"), Furniture("Furniture"), Stationery("Stationary");
+    
+    private String description;
+    
+    private ItemCategory(String description)
+    {
+        this.description = description;
+    }
+    
+    public String toString()
+    {
+        return description;
+    }
 }
