@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=RunForYourLife
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ LombaHitung\ here.\r\n\ \r\n\ @author\ Dheavira\ Hadina\ Putri\ -\ 1606831773\ \r\n
+comment1.params=name\ delay
+comment1.target=RunForYourLife(java.lang.String,\ int)
+comment2.params=
+comment2.target=void\ run()
+comment3.params=
+comment3.target=void\ start()
+numComments=4
