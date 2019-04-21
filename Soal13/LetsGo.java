@@ -2,7 +2,7 @@
 import java.util.*;
 
 /**
- * Write a description of class Tes here.
+ * Write a description of class LetsGo here.
  * 
  * @author Dheavira Hadina Putri - 1606831773 
  */

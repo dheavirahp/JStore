@@ -2,7 +2,7 @@ import java.util.*;
  
 
 /**
- * Write a description of class LombaHitung here.
+ * Write a description of class RunForYourLife here.
  * 
  * @author Dheavira Hadina Putri - 1606831773 
  */
