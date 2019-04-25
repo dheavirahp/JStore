@@ -1,5 +1,4 @@
-import java.util.*;
-
+package jstore;
 import java.util.*;
 
 public class DatabaseItem

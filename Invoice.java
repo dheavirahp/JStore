@@ -1,3 +1,5 @@
+package jstore;
+
 import java.util.*;
 /**
 *Class Invoice berfungsi sebagai tanda bukti transaksi dengan memperlihatkan
@@ -9,7 +11,6 @@ import java.util.*;
 *@since 28/01/2018
 */
 import java.util.*;
-
 public abstract class Invoice
 {
     private int id;

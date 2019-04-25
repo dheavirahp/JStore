@@ -1,3 +1,4 @@
+package jstore;
 public class CustomerNotFoundException extends Exception{
     private int customer_error;
 

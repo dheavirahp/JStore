@@ -1,3 +1,4 @@
+package jstore;
 public class CustomerDoesntHaveActiveException extends Exception{
         private Customer customer_error;
 

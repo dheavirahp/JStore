@@ -1,3 +1,5 @@
+package jstore;
+
 /**
 * @author Dheavira Hadina Putri
 *@version 1
@@ -5,7 +7,6 @@
 **/
 import java.util.*;
 import java.text.*;
-
 public class Sell_Installment extends Invoice
 {
     private static InvoiceType INVOICE_TYPE = InvoiceType.Sell;

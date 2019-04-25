@@ -1,3 +1,4 @@
+package jstore;
 /**
 *Class Location digunakan untuk melakukan pendataan untuk pembagian wilayah
 *darimana Supplier berasal, nantinya class ini akan dipanggil kembali didalam
@@ -6,7 +7,9 @@
 * @version 1
 * @since 28/01/2018
 */
+
 public class Location
+
 {
     private String province;
     private String description;

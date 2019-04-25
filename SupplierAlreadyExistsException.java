@@ -1,3 +1,4 @@
+package jstore;
 public class SupplierAlreadyExistsException extends Exception{
     private Supplier supplier_error;
 

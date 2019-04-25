@@ -1,3 +1,4 @@
+package jstore;
 public class CustomerAlreadyExistsException extends Exception{
         private Customer customer_error;
 

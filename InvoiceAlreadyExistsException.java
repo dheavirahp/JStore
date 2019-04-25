@@ -1,3 +1,4 @@
+package jstore;
 public class InvoiceAlreadyExistsException extends Exception{
         private Invoice invoice_error;
 

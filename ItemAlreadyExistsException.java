@@ -1,3 +1,4 @@
+package jstore;
 public class ItemAlreadyExistsException extends Exception {
         private Item item_error;
 

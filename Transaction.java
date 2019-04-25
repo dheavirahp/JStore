@@ -1,3 +1,4 @@
+package jstore;
 /**
 * @author Dheavira Hadina Putri
 *@version 1

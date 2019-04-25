@@ -1,3 +1,4 @@
+package jstore;
 /**
 *Class Item digunakan untuk menentukan apa saja dan banyaknya Item yang
 *tersedia di Jstore. Nantinya customer akan mendapatkan barang yang mereka
@@ -7,6 +8,7 @@
 *@version 1
 *@since 28/01/2018
 */
+
 public class Item
 {
     private int id;

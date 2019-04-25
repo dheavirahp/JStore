@@ -1,3 +1,4 @@
+package jstore;
 public class SupplierNotFoundException extends Exception {
     private int supplier_error;
 

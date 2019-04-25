@@ -1,3 +1,5 @@
+package jstore;
+
 /**
 * @author Dheavira Hadina Putri
 *@version 1
@@ -6,7 +8,6 @@
 import java.util.*;
 import java.text.*;
 import java.util.ArrayList;
-
 public class Sell_Paid extends Invoice
 {
     private static InvoiceType INVOICE_TYPE = InvoiceType.Sell;

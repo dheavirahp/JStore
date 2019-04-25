@@ -1,3 +1,4 @@
+package jstore;
 public class InvoiceNotFoundException extends Exception{
         private int invoice_error;
 

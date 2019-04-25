@@ -1,3 +1,4 @@
+package jstore;
 /**
 *Class Supplier digunakan untuk melakukan pendataan terhadap supplier yang
 *bekerjasama dengan Jstore. Supplier ini dapat menyediakan beberapa Item yang
@@ -7,6 +8,7 @@
 *@version 1
 *@since 28/01/2018
 */
+
 public class Supplier
 {
     private int id;

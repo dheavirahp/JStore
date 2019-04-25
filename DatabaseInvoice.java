@@ -1,3 +1,4 @@
+package jstore;
 /**
  *Class DatabaseSupplier digunakan sebagai pengolahan data yang sudah masuk
  *dari Class Supplier dan kita bisa menambahkan dan menghapus data dari
@@ -11,6 +12,7 @@
  * Merupakan Class DatabaseInvoice.
  *
  */
+
 import java.util.*;
 
 public class DatabaseInvoice
