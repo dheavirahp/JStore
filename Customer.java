@@ -7,7 +7,7 @@ package jstore;
 
 import java.util.*;
 import java.text.*;
-import java.util.regex.*;  
+import java.util.regex.*;
 
 public class Customer
 {
@@ -23,19 +23,19 @@ public class Customer
     /**
      * Constructor for objects of class Customer
      */
-    public Customer(String name, String email, String username, String password, 
-    Calendar birthDate)
+    public Customer(String name, String email, String username, String password,
+                    Calendar birthDate)
     {
         this.id = DatabaseCustomer.getLastCustomerID() + 1;
-        this.name = name; 
+        this.name = name;
         this.email = email;
         this.username = username;
         this.password = password;
         this.birthDate = birthDate;
     }
-    
-    public Customer(String name, String email, String username, String password, 
-    int year, int month, int dayOfMonth)
+
+    public Customer(String name, String email, String username, String password,
+                    int year, int month, int dayOfMonth)
     {
         this.id = DatabaseCustomer.getLastCustomerID() + 1;
         this.name = name;
@@ -43,7 +43,7 @@ public class Customer
         this.username = username;
         this.password = password;
         this.id = id;
-        this.birthDate = new GregorianCalendar(year, month, dayOfMonth);
+        this.birthDate = new GregorianCalendar(year, (month-1), dayOfMonth);
     }
 
     /**
@@ -56,7 +56,7 @@ public class Customer
     {
         return name;
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -67,7 +67,7 @@ public class Customer
     {
         return email;
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -78,7 +78,7 @@ public class Customer
     {
         return username;
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -89,7 +89,7 @@ public class Customer
     {
         return password;
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -100,7 +100,7 @@ public class Customer
     {
         return id;
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -109,10 +109,10 @@ public class Customer
      */
     public Calendar getBirthDate()
     {
-       System.out.println("Birth date: " + dateFormat.format(birthDate.getTime()));
+        System.out.println("Birth date: " + dateFormat.format(birthDate.getTime()));
         return birthDate;
     }
-       
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -123,7 +123,7 @@ public class Customer
     {
         this.name = name;
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -132,10 +132,10 @@ public class Customer
      */
     public void setEmail(String email)
     {
-        if(Pattern.matches("^[a-zA-Z0-9_+&*-]+(?:\\."+ 
-                            "[a-zA-Z0-9_+&*-]+)*@" + 
-                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" + 
-                            "A-Z]{2,7}$", email))
+        if(Pattern.matches("^[a-zA-Z0-9_+&*-]+(?:\\."+
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$", email))
         {
             this.email = email;
         }
@@ -144,7 +144,7 @@ public class Customer
             this.email = "";
         }
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -155,7 +155,7 @@ public class Customer
     {
         this.username = username;
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -173,7 +173,7 @@ public class Customer
             this.password = "";
         }
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -184,7 +184,7 @@ public class Customer
     {
         this.id = id;
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -195,7 +195,7 @@ public class Customer
     {
         this.birthDate = birthDate;
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -206,7 +206,7 @@ public class Customer
     {
         birthDate = new GregorianCalendar(year, (month-1), dayOfMonth);
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -215,6 +215,7 @@ public class Customer
      */
     public String toString()
     {
+        System.out.println("==========CUSTOMER==========");
         System.out.println("Name: " + name);
         System.out.println("Email: " + email);
         System.out.println("Username: " + username);

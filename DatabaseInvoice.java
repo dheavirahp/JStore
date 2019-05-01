@@ -58,7 +58,7 @@ public class DatabaseInvoice
     {
         for(Invoice temp : INVOICE_DATABASE)
         {
-            if((temp.getItem() == invoice.getItem()) ||
+            if((temp.getItem() == invoice.getItem()) &&
                     (temp.getCustomer() == invoice.getCustomer()))
             {
                 throw new InvoiceAlreadyExistsException(invoice);
@@ -103,10 +103,6 @@ public class DatabaseInvoice
                 list.add(temp);
                 found = true;
             }
-            else
-            {
-                throw new CustomerDoesntHaveActiveException(customer);
-            }
         }
         if(found)
         {
@@ -114,7 +110,7 @@ public class DatabaseInvoice
         }
         else
         {
-            return null;
+            throw new CustomerDoesntHaveActiveException(customer);
         }
     }
 

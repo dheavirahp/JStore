@@ -9,7 +9,9 @@ package jstore;
  *@version 1
  *@since 28/01/2018
  */
+
 import java.util.*;
+
 public class DatabaseSupplier
 {
     private static ArrayList<Supplier> SUPPLIER_DATABASE = new ArrayList<Supplier>();

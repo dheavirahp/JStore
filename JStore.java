@@ -17,57 +17,53 @@ public class JStore
     public static void main(String[] args)
     {
 
-        SpringApplication.run(JStore.class, args);
+
 
         Location location1 = new Location("Depok", "Jawa Barat", "KMekarsari");
 
         try {
-            DatabaseSupplier.addSupplier(new Supplier(1,"Dhea","dhea@mail.com", "+6285712345", location1));
+            DatabaseSupplier.addSupplier(new Supplier("Dhea","dhea@mail.com", "+6285712345", location1));
         } catch (SupplierAlreadyExistsException e) {
             System.out.println(e.getExMessage());
         }
         try {
-            DatabaseSupplier.addSupplier(new Supplier(1,"Vira","Vira@mail.com", "+6281212345", location1));
+            DatabaseSupplier.addSupplier(new Supplier("Vira","Vira@mail.com", "+6281212345", location1));
         } catch (SupplierAlreadyExistsException e) {
             System.out.println(e.getExMessage());
         }
         try {
-            DatabaseSupplier.addSupplier(new Supplier(1,"Putri","Putri@mail.com", "+6281312345", location1));
+            DatabaseSupplier.addSupplier(new Supplier("Putri","Putri@mail.com", "+6281312345", location1));
         } catch (SupplierAlreadyExistsException e)
         {
             System.out.println(e.getExMessage());
         }
 
         try {
-            DatabaseItem.addItem(new Item(1, "Calculator", ItemStatus.New, 1300000, DatabaseSupplier.getSupplier(1), ItemCategory.Electronics));
+            DatabaseItem.addItem(new Item("Calculator",1300000,  ItemCategory.Electronics, ItemStatus.New, DatabaseSupplier.getSupplier(1)));
         } catch (ItemAlreadyExistsException e) {
             System.out.println(e.getExMessage());
         }
         try {
-            DatabaseItem.addItem(new Item(1, "Smartphone", ItemStatus.New, 200000, DatabaseSupplier.getSupplier(1), ItemCategory.Electronics));
+            DatabaseItem.addItem(new Item("Smartphone", 15000,  ItemCategory.Electronics, ItemStatus.New, DatabaseSupplier.getSupplier(1)));
         } catch (ItemAlreadyExistsException e)
         {
             System.out.println(e.getExMessage());
         }
 
         try {
-            DatabaseItem.addItem(new Item(1, "TV", ItemStatus.New, 150000, DatabaseSupplier.getSupplier(1), ItemCategory.Electronics));
+            DatabaseItem.addItem(new Item("TV",150000,  ItemCategory.Electronics, ItemStatus.New, DatabaseSupplier.getSupplier(2)));
         } catch (ItemAlreadyExistsException e)
         {
             System.out.println(e.getExMessage());
         }
         try {
-            DatabaseItem.addItem(new Item(1, "Mouse", ItemStatus.New, 250000, DatabaseSupplier.getSupplier(1), ItemCategory.Electronics));
+            DatabaseItem.addItem(new Item("Mouse", 250000,  ItemCategory.Electronics, ItemStatus.New, DatabaseSupplier.getSupplier(3)));
         } catch (ItemAlreadyExistsException e)
         {
             System.out.println(e.getExMessage());
         }
+        SpringApplication.run(JStore.class, args);
     }
 
-
-    public void JStore()
-    {
-        //
-    }
 
 }

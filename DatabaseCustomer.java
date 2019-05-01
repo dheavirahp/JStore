@@ -85,6 +85,18 @@ public class DatabaseCustomer
         return null;
     }
 
+    public static Customer getCustomerLogin(String email, String password)
+    {
+        for(Customer temp : CUSTOMER_DATABASE)
+        {
+            if(temp.getEmail().equals(email) && temp.getPassword().equals(password))
+            {
+                return temp;
+            }
+        }
+        return null;
+    }
+
     /**
      * An example of a method - replace this comment with your own
      *
@@ -102,17 +114,5 @@ public class DatabaseCustomer
             }
         }
         throw new CustomerNotFoundException(id);
-    }
-
-    public static Customer getCustomerLogin(String email, String password)
-    {
-        for(Customer customer : CUSTOMER_DATABASE)
-        {
-            if(customer.getEmail() == email && customer.getPassword() == password)
-            {
-                return customer;
-            }
-        }
-        return null;
     }
 }

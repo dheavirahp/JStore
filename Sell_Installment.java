@@ -5,8 +5,10 @@ package jstore;
 *@version 1
 *@since 28/01/2018
 **/
+
 import java.util.*;
 import java.text.*;
+
 public class Sell_Installment extends Invoice
 {
     private static InvoiceType INVOICE_TYPE = InvoiceType.Sell;
@@ -14,129 +16,131 @@ public class Sell_Installment extends Invoice
     private int installmentPeriod;
     private int installmentPrice;
     private Customer customer;
-    private boolean isActive; 
+    private boolean isActive;
     private SimpleDateFormat dateFormat = new SimpleDateFormat ("dd MMM yyy");
-    
+
     /**
      * Constructor for objects of class Sell_Installment
      */
     public Sell_Installment(ArrayList<Integer> item, int installmentPeriod,
-    Customer customer)
+                            Customer customer)
     {
         super(item);
         this.installmentPeriod = installmentPeriod;
-        this.isActive = true;
+        super.setIsActive(true);
         this.customer = customer;
+//        super.setTotalPrice();
     }
 
     /**
      * An e
      *
-     * @param  y 
-     * @return    the 
+     * @param  y
+     * @return    the
      */
     public int getInstallmentPeriod()
     {
         return installmentPeriod;
     }
-    
+
     /**
      * An e
      *
-     * @param  y 
-     * @return    the 
+     * @param  y
+     * @return    the
      */
     public int getInstallmentPrice()
     {
         return installmentPrice;
     }
-    
+
     /**
-     * An 
+     * An
      *
      * @param  y  a sa
-     * @return    the 
+     * @return    the
      */
     public InvoiceStatus getInvoiceStatus()
     {
         return INVOICE_STATUS;
     }
-    
+
     /**
-     * An 
+     * An
      *
-     * @param  y  a 
+     * @param  y  a
      * @return    th
      */
     public InvoiceType getInvoiceType()
     {
         return INVOICE_TYPE;
     }
-    
+
     /**
-     * An 
+     * An
      *
-     * @param  y  a 
+     * @param  y  a
      * @return    th
      */
     public Customer getCustomer()
     {
         return customer;
     }
-    
+
     /**
-     * An 
+     * An
      *
-     * @param  y  a 
+     * @param  y  a
      * @return    th
      */
     public void setInstallmentPrice(int totalPrice)
     {
         installmentPrice = (int)(1.02 * (totalPrice / installmentPeriod));
     }
-    
+
     /**
-     * An 
+     * An
      *
-     * @param  y  a 
+     * @param  y  a
      * @return    th
      */
     public void setTotalPrice(int installmentPeriod)
     {
         int totalPrice = installmentPrice * installmentPeriod;
-        super.setTotalPrice(totalPrice);
+        super.setTotalPrice();
     }
-    
+
     /**
-     * An 
+     * An
      *
-     * @param  y  a 
+     * @param  y  a
      * @return    th
      */
     public void setCustomer(Customer customer)
     {
         this.customer = customer;
     }
-    
+
     /**
      * Me
      *
-     */    
+     */
     @Override
     public String toString()
     {
+        System.out.println("==========INVOICE==========");
         System.out.println("ID = " + super.getId());
         ArrayList<Integer> listItemID = DatabaseInvoice.getInvoice(super.getId()).getItem();
         for(int tempID : listItemID)
         {
-            System.out.println("Item = " + 
-            DatabaseItem.getItemFromID(tempID).getName());
-            System.out.println("Price = " + 
-            DatabaseItem.getItemFromID(tempID).getPrice());
-            System.out.println("Supplier ID = " + 
-            DatabaseItem.getItemFromID(tempID).getSupplier().getId());
-            System.out.println("Supplier name = " + 
-            DatabaseItem.getItemFromID(tempID).getSupplier().getName());
+            System.out.println("Item = " +
+                    DatabaseItem.getItemFromID(tempID).getName());
+            System.out.println("Price = " +
+                    DatabaseItem.getItemFromID(tempID).getPrice());
+            System.out.println("Supplier ID = " +
+                    DatabaseItem.getItemFromID(tempID).getSupplier().getId());
+            System.out.println("Supplier name = " +
+                    DatabaseItem.getItemFromID(tempID).getSupplier().getName());
         }
         System.out.println("Buy date = " + dateFormat.format(super.getDate().getTime()));
         System.out.println("Price total = " + super.getTotalPrice());
@@ -149,3 +153,4 @@ public class Sell_Installment extends Invoice
         return "";
     }
 }
+

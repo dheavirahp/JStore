@@ -1,19 +1,10 @@
 package jstore;
 
 import java.util.*;
-/**
-*Class Invoice berfungsi sebagai tanda bukti transaksi dengan memperlihatkan
-*fungsi dari Class Item dengan rincian total harga dari seluruh item yang
-*dibeli beserta tanggal pembelian.
-*
-*@author Dheavira Hadina Putri
-*@version 1
-*@since 28/01/2018
-*/
-import java.util.*;
+
 public abstract class Invoice
 {
-    private int id;
+    private int id = 0;
     private ArrayList<Integer> item;
     private Calendar date;
     private int totalPrice;
@@ -40,7 +31,7 @@ public abstract class Invoice
     {
         return id;
     }
-    
+
     /**
      * Method untuk mengembalikan item yang dibeli
      *
@@ -50,7 +41,7 @@ public abstract class Invoice
     {
         return item;
     }
-    
+
     /**
      * Method untuk mengembalikan tanggal invoice
      *
@@ -60,7 +51,7 @@ public abstract class Invoice
     {
         return date;
     }
-    
+
     /**
      * Method untuk mengembalikan total harga item yang dibeli
      *
@@ -70,23 +61,23 @@ public abstract class Invoice
     {
         return totalPrice;
     }
-        
+
     /**
-     * An 
+     * An
      *
      * @param  y  a sa
-     * @return    the 
+     * @return    the
      */
     public abstract InvoiceStatus getInvoiceStatus();
-    
+
     /**
-     * An 
+     * An
      *
-     * @param  y  a 
+     * @param  y  a
      * @return    th
      */
     public abstract InvoiceType getInvoiceType();
-      
+
     /**
      * Method untuk mengubah id invoice
      *
@@ -96,7 +87,7 @@ public abstract class Invoice
     {
         return isActive;
     }
-    
+
     /**
      * Method untuk mengubah id invoice
      *
@@ -106,7 +97,7 @@ public abstract class Invoice
     {
         return customer;
     }
-    
+
     /**
      * Method untuk mengubah id invoice
      *
@@ -116,7 +107,7 @@ public abstract class Invoice
     {
         this.id = id;
     }
-    
+
     /**
      * Method untuk mengubah item pada invoice
      *
@@ -126,7 +117,7 @@ public abstract class Invoice
     {
         this.item = item;
     }
-    
+
     /**
      * Method untuk mengubah tanggal invoice
      *
@@ -136,47 +127,51 @@ public abstract class Invoice
     {
         this.date = date;
     }
-    
+
     /**
      * Method untuk mengubah total harga pada invoice
      *
      * @param  totalPrice  total harga dari suatu invoice
      */
-    public void setTotalPrice(int totalPrice)
+    public void setTotalPrice()
     {
-        this.totalPrice = totalPrice;
+        ArrayList<Integer> listItemID = DatabaseInvoice.getInvoice(id).getItem();
+        for(int tempID : listItemID)
+        {
+            this.totalPrice = totalPrice + DatabaseItem.getItemFromID(tempID).getPrice();
+        }
     }
-       
+
     /**
-     * 
      *
-     * @param  
+     *
+     * @param
      */
     public void setInvoiceStatus(InvoiceStatus status)
     {
         this.status = status;
     }
-    
+
     /**
-     * 
      *
-     * @param  
+     *
+     * @param
      */
     public void setIsActive(boolean isActive)
     {
         this.isActive = isActive;
     }
-    
+
     /**
-     * 
      *
-     * @param  
+     *
+     * @param
      */
     public void setCustomer(Customer customer)
     {
         this.customer = customer;
     }
-    
+
     /**
      * Method untuk menampilkan total harga pada invoice
      *
